@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ShoppingCartTests extends BaseTest {
 
-    @Test
+    @Test(groups = {"regression"}, description = "bucket after addind cart")
     public void shoppingCartTest() {
         String testItemName = "Sauce Labs Backpack";
         loginPage.login(USERNAME, PASSWORD);
@@ -22,7 +22,8 @@ public class ShoppingCartTests extends BaseTest {
         String expectedItemPrice = "$29.99";
         Assert.assertEquals(actualItemPrice, expectedItemPrice);
     }
-    @Test
+
+    @Test(groups = {"smoke"}, description = "button ContinueShoppingButton")
     public void shoppingCartContinueShoppingButtonTest() {
         String testItemName = "Sauce Labs Backpack";
         loginPage.login(USERNAME, PASSWORD);
@@ -35,7 +36,8 @@ public class ShoppingCartTests extends BaseTest {
                 "Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
         Assert.assertEquals(actualItemDescriptionNew, expectedItemDescriptionNew);
     }
-    @Test
+
+    @Test(groups = {"smoke"}, description = "button CheckOut")
     public void shoppingCartCheckOutButtonTest() {
         String testItemName = "Sauce Labs Backpack";
         loginPage.login(USERNAME, PASSWORD);
