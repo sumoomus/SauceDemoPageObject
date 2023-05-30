@@ -20,6 +20,7 @@ public class LoginTests extends BaseTest {
 
     }
 
+
     @DataProvider
     public Object[][] negativeLoginTestData() {
         return new Object[][]{
