@@ -1,7 +1,8 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import utils.Retry;
 
 public class LoginTests extends BaseTest {
@@ -23,8 +24,7 @@ public class LoginTests extends BaseTest {
 
     @DataProvider
     public Object[][] negativeLoginTestData() {
-        return new Object[][]{
-                {"", "secret_sauce", "Epic sadface: Username is required"},
+        return new Object[][]{{"", "secret_sauce", "Epic sadface: Username is required"},
                 {"standard_user", "", "Epic sadface: Password is required"},
                 {"locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out."}
         };
