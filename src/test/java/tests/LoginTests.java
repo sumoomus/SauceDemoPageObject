@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Issue;
+import io.qameta.allure.TmsLink;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,6 +17,10 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(groups = {"smoke"}, description = "negat Login form", dataProvider = "negativeLoginTestData")
+    
+    @TmsLink("12")
+    @Issue("1")
+
     public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
         loginPage.login(username, password);
         Assert.assertEquals(loginPage.getErrorMessageText(), expectedErrorMessage);

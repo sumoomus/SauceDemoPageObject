@@ -26,8 +26,4 @@ public class TestLiner implements ITestListener {
         }
     }
 
-    @Override
-    public void onTestStart(ITestResult result) {
-        System.out.println("Test '" + result.getName() + "' has started");
-    }
 }

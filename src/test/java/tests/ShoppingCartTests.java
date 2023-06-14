@@ -37,7 +37,7 @@ public class ShoppingCartTests extends BaseTest {
         Assert.assertEquals(actualItemDescriptionNew, expectedItemDescriptionNew);
     }
 
-    @Test(groups = {"smoke"}, description = "тестирование кнопки CheckOuе")
+    @Test(groups = {"smoke"}, description = "тестирование кнопки CheckOut")
     public void shoppingCartCheckOutButtonTest() {
         String testItemName = "Sauce Labs Backpack";
         loginPage.login(USERNAME, PASSWORD);
