@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(groups = {"smoke"}, description = "negat Login form", dataProvider = "negativeLoginTestData")
-    
+
     @TmsLink("12")
     @Issue("1")
 
