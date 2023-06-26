@@ -7,11 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
-import utils.TestLiner;
 
 import java.time.Duration;
 
-@Listeners(TestLiner.class)
 public abstract class BaseTest {
     private final static String URL = "https://www.saucedemo.com/";
     protected final static String USERNAME = "standard_user";
